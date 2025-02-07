@@ -5,7 +5,12 @@
 #
 
 
-from setuptools import setup, find_packages, convert_path
+from setuptools import setup, find_packages
+try:
+    from setuptools import convert_path
+except ImportError:
+    from setuptools._distutils.util import convert_path
+
 
 
 def _version():
